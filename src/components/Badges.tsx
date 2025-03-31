@@ -17,16 +17,13 @@ export default function Badges() {
             data-tooltip-id={`badge-${index}`}
             className="h-6 w-6 text-yellow-500 cursor-pointer hover:scale-110 transition-transform"
           />
-          <Tooltip
-            id={`badge-${index}`}
-            place="bottom"
-            content={
-              <div>
-                <p className="font-bold">{badge.name}</p>
-                <p className="text-sm">{badge.description}</p>
-              </div>
-            }
-          />
+          <Tooltip id={`badge-${index}`} place="bottom">
+            <div className="text-left">
+              <p className="font-bold">{badge.name}</p>
+              <p className="text-sm">{badge.description}</p>
+            </div>
+          </Tooltip>
+
         </div>
       ))}
     </div>
