@@ -141,6 +141,7 @@ const activityStreak = generateStreakData();
         // Step 1: Get IP
         const { data: ipData } = await axios.get('https://api.ipify.org?format=json');
         const userIp = ipData.ip;
+        ip;
         setIp(userIp);
 
         // Step 2: Get Location Info
